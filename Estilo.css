@@ -1,0 +1,69 @@
+*{
+    font-family: 'Poppins',sans-serif;
+
+}
+
+body{
+    background-image: url("Chiloe.jpg");
+
+}
+#Titul{
+text-align: center;
+color: aliceblue;
+font-size: 30px;
+
+}
+#Regirr{
+    text-align: center;
+    color: aliceblue;
+    font-size: 30px;
+
+}
+.Boton{
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 200px;
+    height: 90px;
+    cursor: pointer;
+
+}
+.card{
+    width: 90%;
+    max-width: 470px;
+    background:linear-gradient(135deg,#4c91d1,#062450);
+    color: #fff;
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+}
+.Inpons{
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 50px;
+    flex: 1;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    font-size: 18px;
+
+}
+body form textarea{
+
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 120px;
+    border-radius: 0px;
+    flex: 1;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    font-size: 18px;
+}
