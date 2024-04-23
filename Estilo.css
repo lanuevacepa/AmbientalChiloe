@@ -19,6 +19,12 @@ font-size: 30px;
     font-size: 30px;
 
 }
+#SuccesOrNot{
+    text-align: center;
+    color: aliceblue;
+    font-size: 30px;
+
+}
 .Boton{
     border: 0;
     outline: 0;
@@ -53,8 +59,7 @@ font-size: 30px;
     font-size: 18px;
 
 }
-body form textarea{
-
+textarea{
     border: 0;
     outline: 0;
     background: #ebfffc;
@@ -67,3 +72,13 @@ body form textarea{
     margin-bottom: 16px;
     font-size: 18px;
 }
+.cartaPresent{
+    width: 500px;
+    height: 250px;
+    margin: 50px;
+}
+
+
+
+
+

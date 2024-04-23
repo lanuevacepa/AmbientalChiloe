@@ -14,32 +14,38 @@
 <br>
 <h3 id="Regirr">REGISTRARSE YA</h3>
 
-<form action="" class="card">
-    <input type="text" id="Runs"  placeholder="Rut sin guión ni puntos *" class="Inpons" size="30">
-    <input type="text" id="Nombre" size="30" placeholder="Nombre *" class="Inpons">
-    <input type="text" id="App"  placeholder="Apellido paterno *" class="Inpons" size="30">
-    <input type="text" id="Apm" size="30" placeholder="Apellido materno *" class="Inpons"><br>
+<div class="card">
+    <input type="text" id="Runs"  placeholder="Rut sin guión ni puntos *" class="Inpons" size="30" maxlength="9">
+    <input type="text" id="Nombre" size="30" placeholder="Nombre *" class="Inpons" maxlength="20">
+    <input type="text" id="App"  placeholder="Apellido paterno *" class="Inpons" size="30" maxlength="20">
+    <input type="text" id="Apm" size="30" placeholder="Apellido materno *" class="Inpons" maxlength="20"><br>
     <h2>Edad</h2>
-    <input type="date" id="FechaEdad" min="1989-01-01" max="2006-01-01"  class="Inpons" size="30" placeholder="Edad *"><br>
+    <input type="date" id="FechaEdad" min="1989-01-01" max="2006-01-01"  class="Inpons" size="30" placeholder="Fecha de nacimiento *" value="2003-12-12"><br>
+    <input type="number" id="EdadUs" min="18" max="35" placeholder="Edad *" class="Inpons" size="30" >
     <h2>Genero</h2>
-    <select name="Gender" id="Genero" class="Inpons">
+    <select name="Gender" id="Genero" class="Inpons" title="Genders">
         <option value="Masculino">Masculino</option>
         <option value="Femenino">Femenino</option>
         <option value="Prefiero no decirlo">Prefiero no decirlo</option>
     </select>
-    <input type="text" id="NumeroTel" class="Inpons" placeholder="Numero Telefono (+56)*">
+    <input type="text" id="NumeroTel" class="Inpons" placeholder="Numero Telefono (+56)*" maxlength="12">
+
+
     <input type="text" id="Email" class="Inpons" placeholder="Correo Electronico *">
     <input type="text" id="Profesion" class="Inpons" placeholder="Profesión *">
 
     <h2>Escribe una breve carta de tu motivación para postular</h2>
-    <textarea name="Carta" id="Cartu" cols="30" rows="10" placeholder="Escribe tu carta aqui" ></textarea>
+    <textarea name="Carta" id="Cartu" cols="30" rows="10" placeholder="Escribe tu motivacion aquí" id="Sud"></textarea>
+    <br>
+    <button type="button" class="Boton" onclick="EnviarDates()">ENVIAR DATOS</button>
 
-    <button class="Boton">ENVIAR DATOS</button>
+</div>
+<br>
+<br>
 
-</form>
+<div id="CartPresen">
 
-
-<h3 id="SuccesOrNot"></h3>
+</div>
 
 
 
