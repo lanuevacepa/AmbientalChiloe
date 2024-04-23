@@ -3,13 +3,10 @@
 var Usuario = [];
 
 
-function calcularEdad(fecha) {
-    var hoy = new Date();
-    var Cumple = new Date(fecha);
 
 
-    return hoy.getFullYear - Cumple.getFullYear;
-}
+
+
 
 
 
@@ -19,22 +16,31 @@ function EnviarDates(){
     document.getElementById('Email').value!="" && document.getElementById('Profesion').value!="" && document.getElementById('Cartu').value!=""){
 
         const EdadUs = parseInt(document.getElementById('EdadUs').value);
+        
+        const rudd = document.getElementById('Runs').value;
 
+        var Rut = "";
+
+
+        const DigitoVef = rudd.slice(-1).toUpperCase();
+
+        Rut+=rudd.substring(0,rudd.length-1)+"-"+DigitoVef;
+
+        
+        
         if (EdadUs>=18 && EdadUs<=35){
 
 
 
-        const EdadUser = calcularEdad(document.getElementById('FechaEdad').value);
-
         Usuario = {
             Nombre : document.getElementById('Nombre').value,
-            Rut : document.getElementById('Runs').value,
+            Rut : Rut,
             ApellidoCompleto: document.getElementById('App').value +" "+ document.getElementById('Apm').value,
             NumeroTel : document.getElementById('NumeroTel').value,
             Correo : document.getElementById('Email').value,
             Profesion : document.getElementById('Profesion').value,
             CartaPrese : document.getElementById('Cartu').value,
-            Edad : EdadUser,
+            Edad : EdadUs,
             FechaNacimiento : document.getElementById('FechaEdad').value,
             Genero : document.getElementById('Genero').value
 
@@ -43,7 +49,7 @@ function EnviarDates(){
         alert("POSTULACIÓN ENVIADA CORRECTAMENTE, GENERANDO CARTA...")
 
 
-        let Strinn = "\nGracias por tu consideración de postular a la ayuda a Chiloé!!!\n=========CARTA DE PRESENTACIÓN "+Usuario.Rut+"=========\nNombre completo:"+Usuario.Nombre+" "+Usuario.ApellidoCompleto+"\nNumero de contacto:"+Usuario.NumeroTel+"\nCorreo electronico:"+Usuario.Correo+"\nGenero:"+Usuario.Genero+"\nEdad:"+Usuario.edad+"\nFecha de nacimiento:"+Usuario.FechaNacimiento+"\nProfesión:"+Usuario.Profesion+"\nMotivo del postulante:"+Usuario.CartaPrese;
+        let Strinn = "\nGracias por tu consideración de postular a la ayuda a Chiloé!!!\n=========CARTA DE PRESENTACIÓN "+Usuario.Rut+"=========\nNombre completo:"+Usuario.Nombre+" "+Usuario.ApellidoCompleto+"\nNumero de contacto:"+Usuario.NumeroTel+"\nCorreo electronico:"+Usuario.Correo+"\nGenero:"+Usuario.Genero+"\nEdad:"+Usuario.Edad+"\nFecha de nacimiento:"+Usuario.FechaNacimiento+"\nProfesión:"+Usuario.Profesion+"\nMotivo del postulante:"+Usuario.CartaPrese;
 
 
 
@@ -72,6 +78,8 @@ function EnviarDates(){
 
         ElDiv.autofocus = true;
 
+        window.scrollTo(0,document.body.scrollHeight)
+
 
     }else{
 
@@ -89,3 +97,15 @@ function EnviarDates(){
 }
 
 
+
+const Df = document.getElementById("Runs");
+Df.addEventListener("keydown", (e) => {
+    const expre = /[0-9Kk]/; // Asegúrate de que la expresión regular incluya tanto "K" en mayúscula como en minúscula
+    if (!expre.test(e.key)) e.preventDefault();
+});
+
+const Nn = document.getElementById("NumeroTel");
+Nn.addEventListener("keydown", (e) => {
+    const expre = /[0-9]/; // Asegúrate de que la expresión regular incluya tanto "K" en mayúscula como en minúscula
+    if (!expre.test(e.key)) e.preventDefault();
+});
